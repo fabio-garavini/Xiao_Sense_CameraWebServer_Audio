@@ -7,6 +7,8 @@ Supported cameras:
 - OV2640 (stock)
 - OV5640
 
+[![Youtube Video](docs/img/video_thumbnail.jpg)](https://www.youtube.com/watch?v=_67m6rpgLw4)
+
 ## How to Use it
 
 ### Sketch configuration
