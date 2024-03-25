@@ -1,6 +1,5 @@
 #include "esp_camera.h"
 #include <WiFi.h>
-#include "audio_server.h"
 
 //
 // WARNING!!! PSRAM IC required for UXGA resolution and high JPEG quality
@@ -31,13 +30,14 @@
 //#define CAMERA_MODEL_ESP32S3_CAM_LCD
 //#define CAMERA_MODEL_DFRobot_FireBeetle2_ESP32S3 // Has PSRAM
 //#define CAMERA_MODEL_DFRobot_Romeo_ESP32S3 // Has PSRAM
+#include "audio_server.h"
 #include "camera_pins.h"
 
 // ===========================
 // Enter your WiFi credentials
 // ===========================
-const char* ssid = "your-wifi-name";
-const char* password = "your-wifi-password";
+const char* ssid = "SSID";
+const char* password = "password";
 
 void startCameraServer();
 
@@ -162,12 +162,13 @@ void setup() {
   Serial.println("' to connect");
 }
 
+
 void loop() {
 
-#if defined(HAS_MICROPHONE)
-  Audioserver.handleClient();
-  VideoAudioserver.handleClient();
-#endif
+  #if defined(HAS_MICROPHONE)
+    AudioServer.handleClient();
+    VideoAudioServer.handleClient();
+  #endif
 
   delay(1000);
 }

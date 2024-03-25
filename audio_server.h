@@ -77,7 +77,7 @@ void handleAudioStream() {
   initializeWAVHeader(wavHeader, sampleRate, bitsPerSample, numChannels);
 
   // Get access to the client object
-  WiFiClient Audioclient = Audioserver.client();
+  WiFiClient Audioclient = AudioServer.client();
 
   // Send the 200 OK response with the headers
   Audioclient.print("HTTP/1.1 200 OK\r\n");
