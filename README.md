@@ -1,4 +1,4 @@
-# Xiao_Sense_CameraWebServer_Audio 📸🎙️
+# Xiao Sense CameraWebServer with Audio 📸🎙️
 
 This sketch allows you to use the Xiao ESP32S3 Sense as a webserver for streaming microphone and camera feeds, based on the Arduino CameraWebServer example.
 
